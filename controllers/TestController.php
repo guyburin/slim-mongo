@@ -3,7 +3,6 @@ require_once '/../models/TestModel.php';
 
 class TestController
 {
-   
     public function index()
     {
         $db = new TestModel();
@@ -17,6 +16,7 @@ class TestController
             $tmp["name"] = $doc["name"];
             $tmp["age"] = $doc["age"];
             array_push($result,$tmp);
+            
         }
         response(200, $result);
     }
